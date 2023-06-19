@@ -1,29 +1,29 @@
-# Memcached [![Build Status Image](https://travis-ci.org/nanobox-io/nanobox-docker-memcached.svg)](https://travis-ci.org/nanobox-io/nanobox-docker-memcached)
-This is an Memcached Docker image used to launch a Memcached service on Nanobox. To use this image, add a data component to your `boxfile.yml` with the `nanobox/memcached` image specified:
+# Memcached [![Build Status Image](https://github.com/mu-box/microbox-docker-memcached/actions/workflows/ci.yaml/badge.svg)](https://github.com/mu-box/microbox-docker-memcached/actions)
+This is an Memcached Docker image used to launch a Memcached service on Microbox. To use this image, add a data component to your `boxfile.yml` with the `mubox/memcached` image specified:
 
 ```yaml
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
 ```
 
 ## Memcached Configuration Options
 Memcached components are configured in your `boxfile.yml`. All available configuration options are outlined below.
 
 ###### Quick Links
-[version](#version)  
-[return\_error\_on\_memory\_exhausted](#return-error-on-memory-exhausted)  
-[max\_connections](#max-connections)  
-[chunk\_size\_growth\_factor](#chunk-size-growth-factor)  
-[minimum\_allocated\_space](#minimum-allocated-space)  
-[maximum\_requests\_per\_event](#maximum-requests-per-event)  
-[disable\_cas](#disable-cas)  
-[max\_backlog](#max-backlog)  
+[version](#version)
+[return\_error\_on\_memory\_exhausted](#return-error-on-memory-exhausted)
+[max\_connections](#max-connections)
+[chunk\_size\_growth\_factor](#chunk-size-growth-factor)
+[minimum\_allocated\_space](#minimum-allocated-space)
+[maximum\_requests\_per\_event](#maximum-requests-per-event)
+[disable\_cas](#disable-cas)
+[max\_backlog](#max-backlog)
 [binding\_protocol](#binding-protocol)
 
 #### Overview of Memcached Boxfile Settings
 ```yaml
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     version: 1.4
     return_error_on_memory_exhausted: false
@@ -48,7 +48,7 @@ When configuring a Memcached component in your Boxfile, you can specify which ve
 ```yaml
 # default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     version: 1.4
 ```
@@ -60,7 +60,7 @@ This allows you to have memcached return an error when memory is exhausted rathe
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     return_error_on_memory_exhausted: false
 ```
@@ -72,7 +72,7 @@ Sets the limit for simultaneous connections.
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     max_connections: 1024
 ```
@@ -84,7 +84,7 @@ Specifies the chunk size growth factor.
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     chunk_size_growth_factor: 1.25
 ```
@@ -96,7 +96,7 @@ Sets the minimum space allocated for key+value+flags.
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     minimum_allocated_space: 48
 ```
@@ -108,7 +108,7 @@ Sets the maximum number of requests per event and limits the number of requests 
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     maximum_requests_per_event: 20
 ```
@@ -120,7 +120,7 @@ Allows you to disable the use of [CAS](https://code.google.com/p/memcached/wiki/
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     disable_cas: false
 ```
@@ -132,7 +132,7 @@ Sets the backlog queue limit.
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     max_backlog: 1024
 ```
@@ -148,14 +148,14 @@ Allows you to set the binding protocol. The following are available:
 ```yaml
 #default setting
 data.cache:
-  image: nanobox/memcached
+  image: mubox/memcached
   config:
     binding_protocol: 'auto'
 ```
 
 ## Help & Support
-This is a Memcached Docker image provided by [Nanobox](http://nanobox.io). If you need help with this image, you can reach out to us in the [#nanobox IRC channel](http://webchat.freenode.net/?channels=nanobox). If you are running into an issue with the image, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-docker-memcached/issues/new).
+This is a Memcached Docker image provided by [Microbox](http://microbox.cloud). If you need help with this image, you can reach out to us in the [Microbox Discord](https://discord.gg/MCDdHfy). If you are running into an issue with the image, feel free to [create a new issue on this project](https://github.com/mu-box/microbox-docker-memcached/issues/new).
 
 ## License
 
-Mozilla Public License, version 2.0
+This project is released under [The MIT License](http://opensource.org/licenses/MIT).
